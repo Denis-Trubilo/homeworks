@@ -80,17 +80,59 @@ console.log(str7.match(/ab{1,}a/g));*/
 телефона>). Функция должна возвращать true или false. Используйте
 регулярные выражения.*/
 
-/*let phone = '+375-29-333-33-22';
+// let phone = '+375-29-333-33-22';
 
-const userPhone = function (phone) {
-    let regexp = /^[+]?[0-9]{1,4}[\s]?[(|-]?[0-9]{1,4}[)|-]?[\s]?[0-9]{1,3}[\s]?[\ |-]?[0-9]{1,2}[\s]?[\ |-]?[0-9]{1,2}/;
-    rightPhone = (regexp.test(phone));
-    if (rightPhone) {
-        console.log('true');
-        return true;
-    } else {
-        console.log('false');
-        return false;
-    }
-}
-userPhone(phone);*/
+// const userPhone = function (phone) {
+//     let regexp = /^[+]?[0-9]{1,4}[\s]?[(|-]?[0-9]{1,4}[)|-]?[\s]?[0-9]{1,3}[\s]?[\ |-]?[0-9]{1,2}[\s]?[\ |-]?[0-9]{1,2}/;
+//     rightPhone = (regexp.test(phone));
+//     if (rightPhone) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(userPhone(phone));
+
+// 9. Напишите ф-цию строгой проверки адреса эл. почты с учетом следующих
+// условия:
+// - весь адрес не должен содержать русские буквы и спецсимволы, кроме
+// одной «собачки», знака подчеркивания, дефиса и точки;
+// - имя эл. почты (до знака @) должно быть длиной более 2 символов, причем
+// имя может содержать только буквы, цифры, но не быть первыми и
+// единственными в имени;
+// - после последней точки и после @, домен верхнего уровня (ru, by, com и т.п.)
+// не может быть длиной менее 2 и более 11 символов.
+// Функция должна возвращать true или false. Используйте регулярные
+// выражения.
+
+// const userEmail = function (emailD) {
+//     let regexp = /^[\w.-]{2,}@[a-z]{2,11}/gi;
+//     rightEmail = (regexp.test(emailD));
+//     if (rightEmail) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// let emailD = 'de-n.is_15@mail.ru';
+// console.log(userEmail(emailD));
+
+
+//Задача из классной работы
+
+// 8. Напишите функцию numProducts(num), 
+// которая в зависимости от переданного в нее целочисленного аргумента num,
+// будет выводить слово «товар» в нужной форме («12 товаров», но «22 товара»). 
+// По умолчанию аргумент num должен иметь значение 0.
+
+// const numProducts = function(num = 0) {
+//         if (num == 1 || num % 10 == 1 && num != 11){
+//             return (num + " " + 'товар');
+//         } else if (num != 12 && num != 13 && num != 14 && num % 10 == 2 || num % 10 == 3 || num % 10 == 4) {
+//             return (num + " " + 'товара')
+//         } else {
+//             return (num + " " + 'товаров');
+//         }
+//     }
+
+// console.log(numProducts());
